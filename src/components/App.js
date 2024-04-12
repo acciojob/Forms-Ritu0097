@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Form from './Form';
 import FormRef from './FormRef';
 import FormState from './FormState';
@@ -21,9 +21,12 @@ const App = () => {
             </li>
           </ul>
         </nav>
-        <Route path="/form" exact component={Form} />
-        <Route path="/form-ref" component={FormRef} />
-        <Route path="/form-state" component={FormState} />
+
+        <Routes>
+          <Route path="/form" element={<Form />} />
+          <Route path="/form-ref" element={<FormRef />} />
+          <Route path="/form-state" element={<FormState />} />
+        </Routes>
       </div>
     </Router>
   );
