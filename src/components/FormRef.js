@@ -9,13 +9,11 @@ const FormRef = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Access form values using refs
     console.log(fullNameRef.current.value);
     console.log(emailRef.current.value);
     console.log(passwordRef.current.value);
     console.log(confirmPasswordRef.current.value);
   };
-
   return (
     <Card>
       <h2>Using useRef for Input and Submission Handling</h2>
