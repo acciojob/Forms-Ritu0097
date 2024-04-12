@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Form from './components/Form';
-import FormRef from './components/FormRef';
-import FormState from './components/FormState';
+import Form from './Form';
+import FormRef from './FormRef';
+import FormState from './FormState';
 
 const App = () => {
   return (
@@ -21,7 +21,6 @@ const App = () => {
             </li>
           </ul>
         </nav>
-
         <Route path="/form" exact component={Form} />
         <Route path="/form-ref" component={FormRef} />
         <Route path="/form-state" component={FormState} />
